@@ -16,6 +16,8 @@ public class SubarrayQuestionsTest {
     private final int[] LONG_SEQ_TEST_5_NEGATIVE = {3, 6, 1, 4, -2, 8};
     private final int[] LONG_SEQ_TEST_6_DBL_NEG = {3, 6, 1, 4, -2, 8, -4};
     private final int[] LONG_SEQ_TEST_7_ZERO = {0, 3, 6, -1, 4, 0, 8, -4};
+    private final int[] LONG_SEQ_TEST_8_NOT_FIRST_INDEX = {100, 3, 6, -1, 4, 0, 8, -4};
+
 
     @BeforeEach
     void init() {
@@ -32,6 +34,14 @@ public class SubarrayQuestionsTest {
                 "Test 3 - One Element");
         assertEquals(7, subarrayQuestions.longestSubsequenceDetermination(LONG_SEQ_TEST_4_INTERLEAVE),
                 "Test 4 - Interleaved");
+        assertEquals(3, subarrayQuestions.longestSubsequenceDetermination(LONG_SEQ_TEST_5_NEGATIVE),
+                "Test 5 - Negative");
+        assertEquals(3, subarrayQuestions.longestSubsequenceDetermination(LONG_SEQ_TEST_6_DBL_NEG),
+                "Test 6 - Double Negative");
+        assertEquals(4, subarrayQuestions.longestSubsequenceDetermination(LONG_SEQ_TEST_7_ZERO),
+                "Test 7 - Zeroes");
+        assertEquals(3, subarrayQuestions.longestSubsequenceDetermination(LONG_SEQ_TEST_8_NOT_FIRST_INDEX), 
+                "Test 8 - Not First Index");
     }
     
     @Test
