@@ -13,6 +13,8 @@ public class SubarrayQuestions {
         if (inputArray != null && inputArray.length > 0) {
             int[] longestArray = new int[inputArray.length];
 
+            int longestSubsequence = 0;
+
             for (int i = longestArray.length - 1; i >= 0; i--) {
                 longestArray[i]=1;
 
@@ -21,8 +23,10 @@ public class SubarrayQuestions {
                         longestArray[i] = Math.max(longestArray[i], longestArray[j]+1);
                     }
                 }
+
+                longestSubsequence = Math.max(longestSubsequence, longestArray[i]);
             }
-            return longestArray[0];
+            return longestSubsequence;
         }
         return 0;
     }
