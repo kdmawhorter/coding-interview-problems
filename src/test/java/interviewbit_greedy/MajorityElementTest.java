@@ -12,8 +12,9 @@ public class MajorityElementTest {
     static int[] TEST_1_EMPTY= {};
     static int[] TEST_2_SINGLE_ELEMENT= {1};
     static int[] TEST_3_SIMPLE_MAJORITY= {1, 1, 1, 1, 2, 2, 2};
-    static int[] TEST_4_DISPERSED_MAJORITY= {1, 2, 1, 3, 4, 1, 5, 1, 1, 6};
-    static int[] TEST_5_NO_MAJORITY= {1, 2, 1, 3, 4, 1, 5, 1, 6};
+    static int[] TEST_4_DISPERSED_MAJORITY= {1, 2, 1, 3, 4, 1, 5, 1, 1, 6, 1};
+    static int[] TEST_5_DEADLOCK= {1, 1, 1, 2, 2, 2};
+    static int[] TEST_6_NO_MAJORITY= {1, 2, 1, 3, 4, 1, 5, 1, 6};
         
     @BeforeEach
     void init() {
@@ -27,6 +28,7 @@ public class MajorityElementTest {
         assertEquals(1, me.findMajorityElement(TEST_3_SIMPLE_MAJORITY), "Test 3: Simple Majority");
         assertEquals(1, me.findMajorityElement(TEST_4_DISPERSED_MAJORITY),
                 "Test 4: Dispersed/Even Majority");
-        assertEquals(0, me.findMajorityElement(TEST_5_NO_MAJORITY), "Test 5: No Majority");
+        assertEquals(0, me.findMajorityElement(TEST_5_DEADLOCK), "Test 5: Deadlock");
+        assertEquals(0, me.findMajorityElement(TEST_6_NO_MAJORITY), "Test 6: No Majority");
     }
 }

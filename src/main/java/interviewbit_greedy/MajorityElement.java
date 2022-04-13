@@ -21,7 +21,7 @@ public class MajorityElement {
                     maxElem = elem;
                 }
             }
-            return (maxElemCnt >= Math.floorDiv(inputArray.length+1, 2)) ? maxElem : 0;
+            return (maxElemCnt > Math.floorDiv(inputArray.length, 2)) ? maxElem : 0;
         }
         return 0;
     }
