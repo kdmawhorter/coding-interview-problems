@@ -1,6 +1,4 @@
-package interviewbit_greedy;
-
-import org.jetbrains.annotations.NotNull;
+package interviewbit;
 
 public class GasStation {
 

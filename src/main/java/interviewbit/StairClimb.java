@@ -1,4 +1,4 @@
-package interviewbit_greedy;
+package interviewbit;
 
 public class StairClimb {
 
