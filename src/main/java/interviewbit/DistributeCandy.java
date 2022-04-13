@@ -1,4 +1,4 @@
-package interviewbit_greedy;
+package interviewbit;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

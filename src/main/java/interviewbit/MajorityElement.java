@@ -1,11 +1,15 @@
-package interviewbit_greedy;
-
-import org.jetbrains.annotations.NotNull;
+package interviewbit;
 
 import java.util.HashMap;
 
 public class MajorityElement {
 
+    /**
+     * Given an input array, returns the majority element (meaning more than half), else 0 if it doesn't exist.
+     *
+     * @param inputArray - an int array
+     * @return the majority element
+     */
     public int findMajorityElement(int[] inputArray) {
         if (inputArray!=null && inputArray.length>0) {
             HashMap<Integer, Integer> elementCount = new HashMap<>();
