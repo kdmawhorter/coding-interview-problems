@@ -1,12 +1,18 @@
 package interviewbit;
 
+import org.jetbrains.annotations.NotNull;
+
+/**
+ * A class designed to answer problems related to InterviewBit Amazon Problems
+ * <a href="https://www.interviewbit.com/problems/ways-to-decode/">Ways to Decode</a>.
+ */
 public class CodedMessageDecoded {
 
     /**
      * Given an input string representing a coded message where all letters are encoded as digits (i.e. A=1, B=2, ...
      * Z=26), returns the total number of possible messages the string could represent.
      *
-     * @param message - A string representing a digit encoded message
+     * @param message A string representing a digit encoded message
      * @return The number of possible ways to decode codedMessage.
      */
     public int waysToDecode(String message) {
@@ -38,24 +44,20 @@ public class CodedMessageDecoded {
 
     /**
      * Determines whether a requested slice of an input string is a valid code, from the coding paradigm specified
-     * with {@link #waysToDecode(String) waysToDecode}. Namely, if the substring is a single element within the
+     * with {@link #waysToDecode(String)}. Namely, if the substring is a single element within the
      * inputString then it must not be zero. Else if the substring is a two element string within input string, it must
      * not begin with a 0 and must be 'less' than "27". Anything else is a fail.
      *
-     * @param inputString - The string to be sliced
-     * @param startIndex - The start index of the slice
-     * @param endIndex - The end index of the slice
-     * @return A boolean representing whether the slice would yield a valid code
+     * @param input The string to be sliced.
+     * @param startIdx The start index of the slice.
+     * @param endIdx The end index of the slice.
+     * @return A boolean representing whether the slice would yield a valid code.
      */
-    private boolean canDecode(String inputString, int startIndex, int endIndex) {
+    private boolean canDecode(@NotNull String input, int startIdx, int endIdx) {
         try {
-
-            return (startIndex>=0 && endIndex<= inputString.length() &&
-                    ((endIndex-startIndex==1 &&
-                             inputString.charAt(startIndex) != '0') ||
-                     (endIndex-startIndex==2 &&
-                             inputString.charAt(startIndex) != '0' &&
-                             Integer.parseInt(inputString.substring(startIndex, endIndex))<27)));
+            return (startIdx>=0 && endIdx<= input.length() &&
+                    input.charAt(startIdx) != '0' &&
+                    (endIdx-startIdx==1 || (endIdx-startIdx==2 && Integer.parseInt(input.substring(startIdx, endIdx))<27)));
         }
         catch (NumberFormatException e){
             return false;
