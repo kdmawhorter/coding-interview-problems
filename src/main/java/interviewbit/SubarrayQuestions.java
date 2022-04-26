@@ -1,11 +1,17 @@
 package interviewbit;
 
+/**
+ * A class designed to answer problems related to InterviewBit Amazon Problems on Subarrays.
+ */
 public class SubarrayQuestions {
 
     /**
-     * Determines the longest subarray in an input array where all elements of the subarray are non decreasing.
+     * Determines the longest subarray in an input array, from left-to-right order and not necessarily contiguous,
+     * where all elements of the subarray are non-decreasing. Described by
+     * <a href="https://www.interviewbit.com/problems/longest-increasing-subsequence/">Longest Increasing
+     * Subsequence</a>.
      *
-     * @param inputArray - an int array
+     * @param inputArray an int array
      * @return the longest subarray as described above
      */
 
@@ -32,9 +38,10 @@ public class SubarrayQuestions {
     }
 
     /**
-     * Returns the maximum product of any contiguous subarray of an input array.
+     * Returns the maximum product of any contiguous subarray of an input array. Described by
+     * <a href="https://www.interviewbit.com/problems/max-product-subarray/">Max Product Subarray</a>
      *
-     * @param inputArray - an int array
+     * @param inputArray an int array
      * @return the maximum contiguous subarray product
      */
     public int findMaxProduct(int[] inputArray) {
