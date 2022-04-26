@@ -76,7 +76,6 @@ public class AddressMapper {
         HashMap<String, Boolean> visitedNodes = new HashMap<>();
 
         String currentNode = getMapping(STARTING_NODE_ADDRESS);
-        String nextNode = null;
 
         while (currentNode != null && !visitedNodes.containsKey(currentNode)) {
             if (currentNode.equals(ENDING_NODE_ADDRESS)) { return true; }

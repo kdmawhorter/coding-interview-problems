@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Arrays;
 
 /**
- * Problem #2 from Interview on 11APR22.<br>
+ * Problem #1 from Interview on 11APR22.<br>
  * <br>
  * A class designed to answer whether two bits in an integer are equivalent. A BitIndexComparisons object can return
  * whether bits k1 and k2 of bit string n are equivalent by calling {@link #compareBitPositions(String)}.

@@ -16,7 +16,6 @@ public class VowelRemoverTest {
     @Test
     @DisplayName("Testing removeVowels functionality.")
     void removeVowelsTest() {
-        String test = "TestConfigurationPush";
         assertEquals("ct", vr.removeVowels("cat"), "Test 1: Cat");
         assertEquals("bcdfghjklmnpqrstvwxyz", vr.removeVowels("abcdefghjklmnpqrstvwxyz"),
                 "Test 2: Lower Case Alphabet");
