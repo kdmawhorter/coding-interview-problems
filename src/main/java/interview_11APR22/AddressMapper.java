@@ -16,7 +16,7 @@ public class AddressMapper {
     private static final String STARTING_NODE_ADDRESS = "START";
 
     /**
-     * The string representation of the ending address.
+     * The String representation of the ending address.
      */
     private static final String ENDING_NODE_ADDRESS = "END";
 
