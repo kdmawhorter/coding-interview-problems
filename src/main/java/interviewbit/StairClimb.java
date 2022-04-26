@@ -1,5 +1,9 @@
 package interviewbit;
 
+/**
+ * A class designed to answer the problem related to InterviewBit Amazon Problems
+ * <a href="https://www.interviewbit.com/problems/stairs/">Stairs</a>.
+ */
 public class StairClimb {
 
     /**

@@ -1,5 +1,9 @@
 package interviewbit;
 
+/**
+ * A class designed to answer the problem related to InterviewBit Amazon Problems
+ * <a href="https://www.interviewbit.com/problems/edit-distance/">Edit Distance</a>.
+ */
 public class EditDistance {
 
     /**
@@ -7,8 +11,8 @@ public class EditDistance {
      * input strings using a <a href="https://en.wikipedia.org/wiki/Wagner%E2%80%93Fischer_algorithm">Wagner
      * Fischer Matrix</a> implementation.
      *
-     * @param a - The first string to compare
-     * @param b - The second string to compare
+     * @param a The first string to compare
+     * @param b The second string to compare
      * @return The Levenshtein distance of the strings
      */
     public int editDistance(String a, String b) {

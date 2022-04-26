@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * A class designed to answer problems related to InterviewBit Amazon Problems
+ * A class designed to answer the problem related to InterviewBit Amazon Problems
  * <a href="https://www.interviewbit.com/problems/distribute-candy/">Distribute Candy</a>.
  */
 public class DistributeCandy {
