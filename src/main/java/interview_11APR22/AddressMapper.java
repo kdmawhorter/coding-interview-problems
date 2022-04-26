@@ -2,9 +2,22 @@ package interview_11APR22;
 
 import java.util.HashMap;
 
+/**
+ * Problem #3 from Interview on 11APR22. A class designed to answer whether a start can be connected with an end.
+ * AddressMapper can be fed lines by calling {@link #addAddress(String)} with a "SRC-DEST" string. After all addresses
+ * have been added, {@link #hasValidStartEndPath()} can be called to return whether there is a valid connection from
+ * the {@link #STARTING_NODE_ADDRESS start address} to the {@link #ENDING_NODE_ADDRESS end address}.
+ */
 public class AddressMapper {
 
+    /**
+     * The String representation of the starting address.
+     */
     private static final String STARTING_NODE_ADDRESS = "START";
+
+    /**
+     * The string representation of the ending address.
+     */
     private static final String ENDING_NODE_ADDRESS = "END";
 
     private final HashMap<String, String> addressMap;
