@@ -6,8 +6,8 @@ even when I freeze up on the digital whiteboard :). Interviews are listed by
 date to ensure anonymity of the source.
 
 ## Problem Sets
-* <a href="/tree/main/src/main/java/interview_11APR22">11APR22 Interview</a>
-* <a href="/tree/main/src/main/java/interviewbit">InterviewBit Questions</a>
+* <a href="tree/main/src/main/java/interview_11APR22">11APR22 Interview</a>
+* <a href="../tree/main/src/main/java/interviewbit">InterviewBit Questions</a>
 
 
 
