@@ -27,13 +27,21 @@ public class DistributeCandyTest {
     @Test
     void distributeCandyTest() {
         assertEquals(4, dc.determineNeededCandies(TEST_1), "Test 1");
+        dc.clear();
         assertEquals(1, dc.determineNeededCandies(TEST_2), "Test 2");
+        dc.clear();
         assertEquals(3, dc.determineNeededCandies(TEST_3), "Test 3");
+        dc.clear();
         assertEquals(3, dc.determineNeededCandies(TEST_4), "Test 4");
+        dc.clear();
         assertEquals(7, dc.determineNeededCandies(TEST_5), "Test 5");
+        dc.clear();
         assertEquals(8, dc.determineNeededCandies(TEST_6), "Test 6");
+        dc.clear();
         assertEquals(6, dc.determineNeededCandies(TEST_7), "Test 7");
+        dc.clear();
         assertEquals(13, dc.determineNeededCandies(TEST_8), "Test 8");
+        dc.clear();
         assertEquals(26, dc.determineNeededCandies(TEST_9), "Test 9");
     }
 
