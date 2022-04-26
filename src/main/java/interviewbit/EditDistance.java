@@ -1,7 +1,7 @@
 package interviewbit;
 
 /**
- * A class designed to answer problems related to InterviewBit Amazon Problems
+ * A class designed to answer the problem related to InterviewBit Amazon Problems
  * <a href="https://www.interviewbit.com/problems/edit-distance/">Edit Distance</a>.
  */
 public class EditDistance {
