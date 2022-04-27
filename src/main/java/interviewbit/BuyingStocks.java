@@ -18,7 +18,19 @@ public class BuyingStocks {
      */
     public int bestTimeToBuy_1(int[] stockPrices) {
         if (stockPrices!=null && stockPrices.length>1) {
-            return 0;
+            int currentOpenTransaction = 0;
+            int largestTransaction = 0;
+
+            for (int i = stockPrices.length - 2; i >= 0; i--) {
+                if (stockPrices[i] <= stockPrices[i + 1]) {
+                    currentOpenTransaction += (stockPrices[i+1]-stockPrices[i]);
+                } else {
+                    largestTransaction = Math.max(largestTransaction, currentOpenTransaction);
+                    currentOpenTransaction = 0;
+                }
+            }
+
+            return Math.max(largestTransaction, currentOpenTransaction);
         }
         return 0;
     }

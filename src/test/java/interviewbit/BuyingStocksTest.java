@@ -29,29 +29,29 @@ public class BuyingStocksTest {
 
     @Test
     void bestTimeToBuy_1Test() {
-        assertEquals(0, buyingStocks.bestTimeToBuy_2(TEST_0_NULL),
+        assertEquals(0, buyingStocks.bestTimeToBuy_1(TEST_0_NULL),
                 "Test 0 - Null");
-        assertEquals(0, buyingStocks.bestTimeToBuy_2(TEST_1_EMPTY),
+        assertEquals(0, buyingStocks.bestTimeToBuy_1(TEST_1_EMPTY),
                 "Test 1 - Empty");
-        assertEquals(0, buyingStocks.bestTimeToBuy_2(TEST_2_ONE_ELEM),
+        assertEquals(0, buyingStocks.bestTimeToBuy_1(TEST_2_ONE_ELEM),
                 "Test 2 - One Elem");
-        assertEquals(9, buyingStocks.bestTimeToBuy_2(TEST_3_TWO_ELEM_INC),
+        assertEquals(9, buyingStocks.bestTimeToBuy_1(TEST_3_TWO_ELEM_INC),
                 "Test 3 - Two Elem Inc");
-        assertEquals(0, buyingStocks.bestTimeToBuy_2(TEST_4_TWO_ELEM_DEC),
+        assertEquals(0, buyingStocks.bestTimeToBuy_1(TEST_4_TWO_ELEM_DEC),
                 "Test 4 - Two Elem Dec");
-        assertEquals(9, buyingStocks.bestTimeToBuy_2(TEST_5_THREE_ELEM_INC),
+        assertEquals(9, buyingStocks.bestTimeToBuy_1(TEST_5_THREE_ELEM_INC),
                 "Test 5 - Three Elem Inc");
-        assertEquals(9, buyingStocks.bestTimeToBuy_2(TEST_6_THREE_ELEM_DEC),
+        assertEquals(9, buyingStocks.bestTimeToBuy_1(TEST_6_THREE_ELEM_DEC),
                 "Test 6 - Three Elem Dec");
-        assertEquals(7, buyingStocks.bestTimeToBuy_2(TEST_7_SMALL_TEST),
+        assertEquals(7, buyingStocks.bestTimeToBuy_1(TEST_7_SMALL_TEST),
                 "Test 7 - Small Test");
-        assertEquals(6, buyingStocks.bestTimeToBuy_2(TEST_8_INTERNET_TEST_I),
+        assertEquals(6, buyingStocks.bestTimeToBuy_1(TEST_8_INTERNET_TEST_I),
                 "Test 8 - Internet Test I");
-        assertEquals(1, buyingStocks.bestTimeToBuy_2(TEST_9_INTERNET_TEST_II),
+        assertEquals(1, buyingStocks.bestTimeToBuy_1(TEST_9_INTERNET_TEST_II),
                 "Test 9 - Internet Test II");
-        assertEquals(0, buyingStocks.bestTimeToBuy_2(TEST_10_ALL_DECREASING),
+        assertEquals(0, buyingStocks.bestTimeToBuy_1(TEST_10_ALL_DECREASING),
                 "Test 10 - All decreasing");
-        assertEquals(3, buyingStocks.bestTimeToBuy_2(TEST_11_Pairs),
+        assertEquals(3, buyingStocks.bestTimeToBuy_1(TEST_11_Pairs),
                 "Test 11 - Pairs");
     }
 
