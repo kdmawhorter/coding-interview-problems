@@ -1,10 +1,17 @@
 package interviewbit;
 
+import com.sun.source.tree.Tree;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
- * A class designed to answer problems related to InterviewBit Amazon Problems on Binary Trees.
+ * A class designed to answer problems related to InterviewBit Amazon Problems on Binary Trees. Since I constructed the
+ * BinaryTree myself (since I'm not in the InterviewBit editor), I chose to push a lot of the functionality to the
+ * TreeNode class. The specified interface from the question is still followed. I would normally just extend the class
+ * but since I'm writing both as classes within BinaryTree I felt it a bit contrived.
  */
 public class BinaryTree {
 
@@ -35,6 +42,15 @@ public class BinaryTree {
         private TreeNode parent;
 
         /**
+         * Highest Path Sum Branch including the node and its contents downstream.
+         */
+        @Getter @Setter
+        private int highestSum;
+
+        private boolean leftHasRun;
+        private boolean rightHasRun;
+
+        /**
          * TreeNode constructor with no children;
          * @param val The value of the new node.
          */
@@ -53,16 +69,39 @@ public class BinaryTree {
             this.left = left;
             this.right = right;
             this.parent = null;
+
+            leftHasRun = true;
+            rightHasRun = true;
+
+            highestSum = 0;
         }
 
         void setLeft(TreeNode left) {
             this.left = left;
+            leftHasRun = false;
             left.setParent(this);
         }
 
         void setRight(TreeNode right) {
             this.right = right;
+            rightHasRun = false;
             right.setParent(this);
+        }
+
+        boolean hasNoChildren() {
+            return left==null && right==null;
+        }
+
+        boolean canRun() {
+            return rightHasRun && leftHasRun;
+        }
+
+        void updateChildRan(TreeNode child) {
+            if (left==child) {
+                leftHasRun = true;
+            } else if (right==child) {
+                rightHasRun = true;
+            }
         }
 
         /**
@@ -77,8 +116,14 @@ public class BinaryTree {
                 tree[i] = new TreeNode(treeArray[i][1]);
             }
             for (int i = 0; i < treeArray.length; i++) {
-                tree[i].setLeft(tree[treeArray[i][2]]);
-                tree[i].setRight(tree[treeArray[i][3]]);
+                Integer leftIdx = treeArray[i][2];
+                Integer rightIdx = treeArray[i][3];
+                if (leftIdx!=null) {
+                    tree[i].setLeft(tree[leftIdx]);
+                }
+                if (rightIdx!=null) {
+                    tree[i].setRight(tree[rightIdx]);
+                }
             }
             return tree[0];
         }
@@ -104,11 +149,63 @@ public class BinaryTree {
      * @param root The root of some Tree.
      * @return The maximum sum path in the tree.
      */
-    public int maxSumPath(TreeNode root) {
+    public Integer maxSumPath(TreeNode root) {
         if (root != null) {
-            return 0;
+            Queue<TreeNode> treeNodeQueue = findLeaves(root);
+
+            Integer highestSum = null;
+
+            while(!treeNodeQueue.isEmpty()) {
+                TreeNode thisNode = treeNodeQueue.poll();
+
+                int thisVal = thisNode.getVal();
+                int leftSum = (thisNode.getLeft()!=null) ? thisNode.getLeft().getHighestSum() : 0;
+                int rightSum = (thisNode.getRight()!=null) ? thisNode.getRight().getHighestSum() : 0;
+
+                int thisSum = thisVal + Math.max(leftSum, 0) + Math.max(rightSum, 0);
+                if (highestSum == null) {
+                    highestSum = thisSum;
+                } else {
+                    highestSum = Math.max(highestSum, thisSum);
+                }
+
+                thisNode.setHighestSum(Math.max(thisVal, Math.max(thisVal+leftSum, thisVal+rightSum)));
+
+                if (thisNode.getParent()!=null) {
+                    thisNode.getParent().updateChildRan(thisNode);
+                    if (thisNode.getParent().canRun()) {
+                        treeNodeQueue.add(thisNode.getParent());
+                    }
+                }
+            }
+
+            return highestSum;
         }
         return 0;
 
+    }
+
+    /**
+     * Returns all nodes reachable from the root that have no children.
+     * @param root The root of a Binary Tree.
+     * @return All nodes under the root with no children.
+     */
+    private Queue<TreeNode> findLeaves(TreeNode root) {
+        Queue<TreeNode> returnQueue = new LinkedList<>();
+        Queue<TreeNode> findLeavesQueue = new LinkedList<>();
+
+        findLeavesQueue.add(root);
+
+        while (!findLeavesQueue.isEmpty()) {
+            TreeNode thisNode = findLeavesQueue.poll();
+
+            if (thisNode.hasNoChildren()) {
+                returnQueue.add(thisNode);
+            } else {
+                findLeavesQueue.add(thisNode.getLeft());
+                findLeavesQueue.add(thisNode.getRight());
+            }
+        }
+        return returnQueue;
     }
 }

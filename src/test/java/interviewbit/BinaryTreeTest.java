@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class BinaryTreeTest {
 
     private final static Integer[][] TEST_CASE_1_INTERNET_I = {{0, 1, 1, 2}, {1, 2, null, null}, {2, 3, null, null}};
-    private final static Integer[][] TEST_CASE_2_INTERNET_II = {{0, 1, 1, 2}, {1, 2, null, null}, {2, 3, null, null}};
+    private final static Integer[][] TEST_CASE_2_INTERNET_II = {{0, -10, 1, 2}, {1, -20, null, null}, {2, -30, null, null}};
     private final static Integer[][] TEST_CASE_3_FULL_TREE = {{0, -30, 1, 2}, {1, 60, 3, 4}, {2, 20, 5, 6}, {3, 50, 7, 8} ,
             {4, 20, 9, 10}, {5, 8, null, null}, {6, 16, 11, 12}, {7, -6, null, null}, {8, 8, null, null},
             {9, 6, null, null}, {10, 2, null, null}, {11, 1, null, null}, {12, -3, null, null}};
