@@ -19,14 +19,20 @@ public class BinaryTree {
         /**
          * The left child of the Node.
          */
-        @Getter @Setter
+        @Getter
         private TreeNode left;
 
         /**
          * The right child of the Node.
          */
-        @Getter @Setter
+        @Getter
         private TreeNode right;
+
+        /**
+         * The parent of the Node.
+         */
+        @Getter @Setter
+        private TreeNode parent;
 
         /**
          * TreeNode constructor with no children;
@@ -46,6 +52,17 @@ public class BinaryTree {
             this.val = val;
             this.left = left;
             this.right = right;
+            this.parent = null;
+        }
+
+        void setLeft(TreeNode left) {
+            this.left = left;
+            left.setParent(this);
+        }
+
+        void setRight(TreeNode right) {
+            this.right = right;
+            right.setParent(this);
         }
 
         /**
