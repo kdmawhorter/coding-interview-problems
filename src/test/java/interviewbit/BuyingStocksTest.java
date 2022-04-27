@@ -78,7 +78,7 @@ public class BuyingStocksTest {
                 "Test 9 - Internet Test II");
         assertEquals(0, buyingStocks.bestTimeToBuy_3(TEST_10_ALL_DECREASING),
                 "Test 10 - All decreasing");
-        assertEquals(12, buyingStocks.bestTimeToBuy_3(TEST_11_Pairs),
+        assertEquals(6, buyingStocks.bestTimeToBuy_3(TEST_11_Pairs),
                 "Test 11 - Pairs");
     }
 }
