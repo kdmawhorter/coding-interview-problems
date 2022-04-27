@@ -13,7 +13,7 @@ public class BuyingStocks {
      * Solves the problem posed
      * <a href="https://www.interviewbit.com/problems/best-time-to-buy-and-sell-stocks-ii/">here</a>
      *
-     * @param stockPrices - an int array representing stock prices
+     * @param stockPrices an int array representing stock prices
      * @return The maximum profit that could be made with the constraints above
      */
     public int bestTimeToBuy_2(int[] stockPrices) {
@@ -25,6 +25,21 @@ public class BuyingStocks {
             }
             return maxProfit[0];
         }
+        return 0;
+    }
+
+    /**
+     * Given an input stock price array, return the maximum profit that could be made if you optimally purchased and
+     * sold stocks given those prices, given that you can only choose to buy, sell, or do nothing each day, you may only
+     * own one share at a time, and you are limited to only making two transactions.<br>
+     * <br>
+     * Solves the problem posed
+     * <a href="https://www.interviewbit.com/problems/best-time-to-buy-and-sell-stocks-iii/">here</a>
+     *
+     * @param stockPrices an int array representing stock prices
+     * @return The maximum profit that could be made with the constraints above
+     */
+    public int bestTimeToBuy_3(int[] stockPrices) {
         return 0;
     }
 }

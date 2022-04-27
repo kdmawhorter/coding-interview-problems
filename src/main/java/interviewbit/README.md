@@ -5,6 +5,7 @@ Several practice questions from the [Inteview Bit Site](https://www.interviewbit
 * [Amazon](https://www.interviewbit.com/amazon-interview-questions/#questions) prep questions
   * Buying Stocks
     * [Best Time to Buy and Sell Stocks II](https://www.interviewbit.com/problems/best-time-to-buy-and-sell-stocks-ii/)
+    * [Best Time to Buy and Sell Stocks III](https://www.interviewbit.com/problems/best-time-to-buy-and-sell-stocks-iii/)
   * [Decoding Coded Messages](https://www.interviewbit.com/problems/ways-to-decode/)
   * [Distributing Candy](https://www.interviewbit.com/problems/distribute-candy/)
   * [Edit Distance](https://www.interviewbit.com/problems/edit-distance/)
