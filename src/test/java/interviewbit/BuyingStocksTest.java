@@ -19,6 +19,7 @@ public class BuyingStocksTest {
     private static final int[] TEST_9_INTERNET_TEST_II = {1, 2, 1, 2};
     private static final int[] TEST_10_ALL_DECREASING = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     private static final int[] TEST_11_Pairs = {1, 2, 1, 3, 1, 4, 1, 4, 1, 3, 1, 2};
+
     private BuyingStocks buyingStocks;
     
     @BeforeEach
