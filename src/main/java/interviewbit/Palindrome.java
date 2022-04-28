@@ -13,8 +13,25 @@ public class Palindrome {
      */
     public int minCutsPalindromePartition(String inputString) {
         if (!inputString.isEmpty()) {
-            return 0;
+            int numberPalindromes = 0;
+            for (int i = 0; i < inputString.length(); i++) {
+                int scanJ = inputString.length()-1;
+
+                while(isNotPalindrome(inputString, i, scanJ)) { scanJ--; }
+                numberPalindromes++;
+                i = scanJ;
+            }
+            return  numberPalindromes-1;
         }
         return 0;
+    }
+
+    private boolean isNotPalindrome(String inputString, int startIndex, int endIndex) {
+        for (int i = startIndex; i <= endIndex; i++, endIndex--) {
+            if (inputString.charAt(i) != inputString.charAt(endIndex)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
