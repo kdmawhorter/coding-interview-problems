@@ -15,6 +15,8 @@ public class MinJumpsTest {
     private static final int[] TEST_5_ONE_JUMP = {10, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
     private static final int[] TEST_6_ALL_ONES = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
     private static final int[] TEST_7_FULL_TEST = {3, 1, 6, 1, 1, 1, 1, 1, 2, 1, 1};
+    private static final int[] TEST_8_NO_PATH = {0, 1, 6, 1, 1, 1, 1, 1, 2, 1, 1};
+    private static final int[] TEST_9_MISSING_STEPS = {3, 1, 6, 1, 0, 0, 1, 1, 2, 1, 1};
 
     private MinJumps minJumps;
 
@@ -33,6 +35,8 @@ public class MinJumpsTest {
         assertEquals(1, minJumps.minJumpsArray(TEST_5_ONE_JUMP),"Test 5: One Jump");
         assertEquals(10, minJumps.minJumpsArray(TEST_6_ALL_ONES),"Test 6: All Ones");
         assertEquals(3, minJumps.minJumpsArray(TEST_7_FULL_TEST),"Test 7: Full");
+        assertEquals(-1, minJumps.minJumpsArray(TEST_8_NO_PATH),"Test 8: No Path");
+        assertEquals(3, minJumps.minJumpsArray(TEST_9_MISSING_STEPS),"Test 9: Missing Steps");
 
     }
 }

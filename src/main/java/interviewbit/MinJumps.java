@@ -14,7 +14,21 @@ public class MinJumps {
      */
     public int minJumpsArray(int[] inputArray) {
         if (inputArray != null && inputArray.length>1) {
-            return 0;
+            Integer[] minJumps = new Integer[inputArray.length];
+
+            minJumps[inputArray.length-1] = 0;
+
+            for (int i = inputArray.length - 2; i >= 0; i--) {
+                Integer shortestJumps = null;
+                for (int j = i+1; j <= Math.min(inputArray.length-1, i+inputArray[i]); j++) {
+                    if (minJumps[j]!=null && (shortestJumps==null || minJumps[j]<shortestJumps)) {
+                        shortestJumps = minJumps[j]+1;
+                    }
+                }
+                minJumps[i] = shortestJumps;
+            }
+
+            return (minJumps[0]!=null) ? minJumps[0] : -1;
         }
         return 0;
     }
