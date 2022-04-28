@@ -14,6 +14,7 @@ Several practice questions from the [Inteview Bit Site](https://www.interviewbit
   * [Edit Distance](https://www.interviewbit.com/problems/edit-distance/)
   * [Gas Station](https://www.interviewbit.com/problems/gas-station/)
   * [Majority Element](https://www.interviewbit.com/problems/majority-element/)
+  * [Min Jumps](https://www.interviewbit.com/problems/min-jumps-array/)
   * [Min Sum Matrix Path](https://www.interviewbit.com/problems/min-sum-path-in-matrix/)
   * [Palindrome Partitioning](https://www.interviewbit.com/problems/palindrome-partitioning-ii/)
   * [Stairs](https://www.interviewbit.com/problems/stairs/)
