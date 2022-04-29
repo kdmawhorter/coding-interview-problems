@@ -207,4 +207,14 @@ public class BinaryTree {
         }
         return returnQueue;
     }
+
+    /**
+     * Returns all possible unique BST with nodes 1 through i. In answer to problem
+     * <a href="https://www.interviewbit.com/problems/unique-binary-search-trees-ii/">Unique Binary Search Trees</a>.
+     * @param i The largest node value in the BSTs.
+     * @return The number of unique BSTs including all nodes 1 through i.
+     */
+    public int uniqueBSTs(int i) {
+        return 0;
+    }
 }

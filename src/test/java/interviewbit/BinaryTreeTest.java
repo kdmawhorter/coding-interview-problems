@@ -28,4 +28,12 @@ public class BinaryTreeTest {
         assertEquals(144, binaryTree.maxSumPath(TEST_CASE_3_FULL_TREE),"Test Case 3 - Full");
         assertEquals(8, binaryTree.maxSumPath(TEST_CASE_4_SINGLE_NODE),"Test Case 4 - Single Node");
     }
+
+    @Test
+    void uniqueBSTsTest() {
+        assertEquals(1, binaryTree.uniqueBSTs(1),"Test Case - 1");
+        assertEquals(2, binaryTree.uniqueBSTs(2),"Test Case - 2");
+        assertEquals(5, binaryTree.uniqueBSTs(3),"Test Case - 3");
+        assertEquals(42, binaryTree.uniqueBSTs( 5),"Test Case - 4");
+    }
 }

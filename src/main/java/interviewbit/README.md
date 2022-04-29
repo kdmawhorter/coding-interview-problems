@@ -5,6 +5,7 @@ Several practice questions from the [Inteview Bit Site](https://www.interviewbit
 * [Amazon](https://www.interviewbit.com/amazon-interview-questions/#questions) prep questions
   * Binary Trees
     * [Max Sum Path](https://www.interviewbit.com/problems/max-sum-path-in-binary-tree/)
+    * [Unique BST](https://www.interviewbit.com/problems/unique-binary-search-trees-ii/)
   * Buying Stocks
     * [Best Time to Buy and Sell Stocks I](https://www.interviewbit.com/problems/best-time-to-buy-and-sell-stocks-i/)
     * [Best Time to Buy and Sell Stocks II](https://www.interviewbit.com/problems/best-time-to-buy-and-sell-stocks-ii/)
