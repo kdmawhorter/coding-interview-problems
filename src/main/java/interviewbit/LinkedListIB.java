@@ -12,42 +12,31 @@ public class LinkedListIB {
         @Getter @Setter
         private int val;
 
-        @Getter
-        private ListNode next;
-
         @Getter @Setter
-        private int downstreamCount;
+        private ListNode next;
 
         ListNode(int val) {
             this.val = val;
             next = null;
-            downstreamCount = 0;
         }
         ListNode(int val, ListNode next) {
             this(val);
             setNext(next);
         }
 
-        public void setNext(ListNode next) {
-            if (this.next!=null) {
-                downstreamCount -= (1 + next.getDownstreamCount());
-            }
-
-            this.next = next;
-
-            if (this.next!=null) {
-                downstreamCount += (1 + next.getDownstreamCount());
-            }
-        }
-
-        int[] getNodeArray() {
+        int getDownstreamCount() {
             int downstreamCount = 0;
             ListNode thisNode = this;
             while(thisNode != null) {
                 downstreamCount++;
                 thisNode = thisNode.getNext();
             }
-            thisNode = this;
+            return downstreamCount;
+        }
+
+        int[] getNodeArray() {
+            int downstreamCount = getDownstreamCount();
+            ListNode thisNode = this;
             int[] returnArray = new int[downstreamCount];
             for (int i = 0; i < downstreamCount; i++) {
                 returnArray[i] = thisNode.getVal();
@@ -65,6 +54,14 @@ public class LinkedListIB {
      * @return The new head of the swapped list.
      */
     public ListNode swapList(ListNode head) {
-        return head;
+        int downstreamCount = head.getDownstreamCount();
+        ListNode newHead = (downstreamCount>1 ? head.getNext() : head);
+        for (int i = 0; i < Math.floorDiv(downstreamCount, 2); i++) {
+            ListNode tempNode =  head.getNext().getNext();
+            head.getNext().setNext(head);
+            head.setNext((i+1)*2+1<downstreamCount ? tempNode.getNext() : tempNode);
+            head = tempNode;
+        }
+        return newHead;
     }
 }

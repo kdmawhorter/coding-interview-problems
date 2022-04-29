@@ -28,13 +28,11 @@ public class LinkedListIBTest {
     private static final LinkedListIB.ListNode TEST_NODE_A = new LinkedListIB.ListNode(1, TEST_NODE_B);
 
     private static final int[] TEST_2 = {1, 2, 3, 4, 5, 6, 7};
-    private static final int[] TEST_2_S = {1, 2, 3, 4, 5, 6, 7};
+    private static final int[] TEST_2_S = {2, 1, 4, 3, 6, 5, 7};
 
     private static final LinkedListIB.ListNode TEST_NODE_X = new LinkedListIB.ListNode(1);
 
     private static final int[] TEST_3 = {1};
-
-
 
     @BeforeEach
     void init() {
