@@ -215,6 +215,20 @@ public class BinaryTree {
      * @return The number of unique BSTs including all nodes 1 through i.
      */
     public int uniqueBSTs(int i) {
+        if (i>0) {
+            int[] uniqueBSTs = new int[i+1];
+
+            uniqueBSTs[0] = 1;
+            uniqueBSTs[1] = 1;
+
+            for (int j = 2; j <= i; j++) {
+                for (int k = 1; k <= j; k++) {
+                    uniqueBSTs[j] += uniqueBSTs[j-k] * uniqueBSTs[k-1];
+                }
+            }
+
+            return uniqueBSTs[i];
+        }
         return 0;
     }
 }
