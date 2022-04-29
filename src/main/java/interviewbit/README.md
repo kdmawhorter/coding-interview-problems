@@ -15,6 +15,7 @@ Several practice questions from the [Inteview Bit Site](https://www.interviewbit
   * [Edit Distance](https://www.interviewbit.com/problems/edit-distance/)
   * [Gas Station](https://www.interviewbit.com/problems/gas-station/)
   * Linked List
+    * [Right Circle Shift](https://www.interviewbit.com/problems/rotate-list/)
     * [Swap Node Pairs](https://www.interviewbit.com/problems/swap-list-nodes-in-pairs/)
   * [Majority Element](https://www.interviewbit.com/problems/majority-element/)
   * [Min Jumps](https://www.interviewbit.com/problems/min-jumps-array/)
