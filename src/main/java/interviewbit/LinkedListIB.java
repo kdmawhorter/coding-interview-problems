@@ -64,4 +64,15 @@ public class LinkedListIB {
         }
         return newHead;
     }
+
+    /**
+     * Right circle shifts an input list in place. Answers problem
+     * <a href="https://www.interviewbit.com/problems/rotate-list/">Right Circle Shift</a>.
+     * @param head The head of the list to be shifted
+     * @param k The amount to be right shifted.
+     * @return The new head of the list.
+     */
+    public ListNode rotateK(ListNode head, int k) {
+        return head;
+    }
 }
