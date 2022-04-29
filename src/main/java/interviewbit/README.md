@@ -14,6 +14,8 @@ Several practice questions from the [Inteview Bit Site](https://www.interviewbit
   * [Distributing Candy](https://www.interviewbit.com/problems/distribute-candy/)
   * [Edit Distance](https://www.interviewbit.com/problems/edit-distance/)
   * [Gas Station](https://www.interviewbit.com/problems/gas-station/)
+  * Linked List
+    * [Swap Node Pairs](https://www.interviewbit.com/problems/swap-list-nodes-in-pairs/)
   * [Majority Element](https://www.interviewbit.com/problems/majority-element/)
   * [Min Jumps](https://www.interviewbit.com/problems/min-jumps-array/)
   * [Min Sum Matrix Path](https://www.interviewbit.com/problems/min-sum-path-in-matrix/)
