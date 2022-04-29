@@ -90,4 +90,27 @@ public class LinkedListIB {
         }
         return newHead;
     }
+
+    /**
+     * Shuffles an n element list by taking each ith element making its next the n-i element, and taking that n-1-i
+     * element and making its next the i+1 element. L0-L1-L2-...-L(n-3)-L(n-2)-L(n-1) produces
+     * L0-L(n-1)-L1-L(n-2)-L2L(n-3)-...<br>
+     * Answers the problem <a href="https://www.interviewbit.com/problems/reorder-list/">Reorder List</a>
+     * @param head The head of the list to shuffle
+     * @return The head of the shuffled list.
+     */
+    public ListNode reorderList(ListNode head) {
+        ListNode thisNode = head;
+        ListNode secondToEndNode, tempNode;
+        while (thisNode.getNext()!=null && thisNode.getNext().getNext()!=null) {
+            secondToEndNode = thisNode;
+            while (secondToEndNode.getNext().getNext()!=null) { secondToEndNode = secondToEndNode.getNext(); }
+            tempNode = thisNode.getNext();
+            thisNode.setNext(secondToEndNode.getNext());
+            secondToEndNode.getNext().setNext(tempNode);
+            secondToEndNode.setNext(null);
+            thisNode = tempNode;
+        }
+        return head;
+    }
 }
