@@ -27,4 +27,5 @@ Several practice questions from the [Inteview Bit Site](https://www.interviewbit
     * [Longest Increasing Subsequence](https://www.interviewbit.com/problems/longest-increasing-subsequence/)
     * [Max Product Subarray](https://www.interviewbit.com/problems/max-product-subarray/)
 * [Adobe](https://www.interviewbit.com/adobe-interview-questions/)
+  * [Grid Unique Paths](https://www.interviewbit.com/problems/grid-unique-paths/)
   * [Min Stack](https://www.interviewbit.com/problems/min-stack/)
